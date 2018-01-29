@@ -7,5 +7,5 @@ time 1114
 {{csrf_field()}}
 <input type="text" name="in">
 <input type="submit" value="送出">
-<input type="hidden">
+
 </form>
