@@ -15,5 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//導向至InputController的index方法
 Route::get('/input','InputController@index');
+
+//導向至InputController的input方法
 Route::post('/input','InputController@input');

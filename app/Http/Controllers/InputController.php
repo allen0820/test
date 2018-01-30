@@ -9,7 +9,10 @@ class InputController extends Controller
 {
     public function index()
     {
+        //抓出資料庫的所有資料放入變數 
         $inputs=Input::all();
+        
+        //回傳input view 並傳回變數 
         return view('input',['inputs'=>$inputs]);
     }
     public function input(Request $request)
@@ -26,5 +29,9 @@ class InputController extends Controller
         //重新導向
         return redirect('input');
         
+    }
+    public function delete(Request $request){
+
+
     }
 }

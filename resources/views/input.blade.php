@@ -1,5 +1,8 @@
+<!-- 用foreach顯示出資料庫的資料 -->
 @foreach ($inputs as $i)
-    <p>{{$i->id}}.{{$i->input}}</p>
+    <p>{{$i->id}}.{{$i->input}}
+    <a href="/input">刪除</a>
+    </p>
 @endforeach
 
 
