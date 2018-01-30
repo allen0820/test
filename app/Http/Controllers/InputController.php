@@ -12,14 +12,18 @@ class InputController extends Controller
         $inputs=Input::all();
         return view('input',['inputs'=>$inputs]);
     }
-    public function input(Request $request){
+    public function input(Request $request)
+    {
+        //存入資料庫一般寫法
+        // $in=$request->input('input');
+        // // $input=new Input();
+        // // $input->input=$in;
+        // // $input->save();
         
-        $input = new Input;
-
-        $input->input = $request->in;
-
-        $input->save();
-
+        //批量賦予
+        $input=Input::create($request->all()) ;    
+        
+        //重新導向
         return redirect('input');
         
     }

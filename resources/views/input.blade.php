@@ -5,7 +5,7 @@
 
 <form action="/input" method="POST">
 {{csrf_field()}}
-<input type="text" name="in">
+<input type="text" name="input">
 <input type="submit" value="送出">
 
 
