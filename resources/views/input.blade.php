@@ -5,14 +5,9 @@
     </p>
 @endforeach
 
-
-<form action="/input" method="POST">
-{{csrf_field()}}
-<input type="text" name="input">
-<input type="submit" value="送出">
-
-
-</form>
-{!! Form::open(array('url' => 'foo/bar')) !!}
-    //
-{!! Form::close() !!}
+{{Form::open(array('url' => '/input'))}}<!-- 預設方法為post -->
+{{Form::token()}} <!-- CSRF防禦 -->
+{{Form::label('input_label','Plase enter the text:')}}
+{{Form::text('input')}}
+{{Form::submit('sent')}}
+{{Form::close()}}
