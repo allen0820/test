@@ -30,8 +30,10 @@ class InputController extends Controller
         return redirect('input');
         
     }
-    public function delete(Request $request){
-
-
+    public function destroy(Request $request,Input $id){
+        //刪除資料庫中id相符的所有檔案
+        $id->delete();
+        //重新導向
+        return redirect('input');
     }
 }
