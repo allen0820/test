@@ -36,4 +36,9 @@ class InputController extends Controller
         //重新導向
         return redirect('input');
     }
+
+    public function update(Input $id){
+
+        return 'work';
+    }
 }
