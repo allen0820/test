@@ -29,3 +29,5 @@ Route::get('/input/update/{id}','InputController@update');
 
 //導向至ChartController的index方法
 Route::get('/chart','ChartController@index');
+
+Route::post('/chart/input','ChartController@input');
