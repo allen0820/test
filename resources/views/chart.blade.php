@@ -16,7 +16,7 @@
                     indexLabel: "{label} {y}",
                     dataPoints: [
                             @foreach($data as $i)
-                        {y:{{$i->times}}, label:"{{$i->do}}"},
+                        {y:{{$i->votes}}, label:"{{$i->app}}"},
                     @endforeach
                     ]
                 }]
@@ -36,18 +36,18 @@
             {{Form::open(array('url'=>'/chart/input'))}}
             {{Form::token()}}
             {{Form::label('Which app is your favorite ?')}}<br>
-            {{Form::radio('do','Google')}}Google<br>
-            {{Form::radio('do','Youtube')}}Youtube<br>
-            {{Form::radio('do','Instagram')}}Instagram<br>
-            {{Form::radio('do','Facebook')}}Facebook<br>
-            {{Form::radio('do','Dcard')}}Dcard<br>
-            {{Form::radio('do','others')}}others<br>
+            {{Form::radio('app','Google')}}Google<br>
+            {{Form::radio('app','Youtube')}}Youtube<br>
+            {{Form::radio('app','Instagram')}}Instagram<br>
+            {{Form::radio('app','Facebook')}}Facebook<br>
+            {{Form::radio('app','Dcard')}}Dcard<br>
+            {{Form::radio('app','others')}}others<br>
             {{Form::submit('sent')}}
             {{Form::close()}}
         </div>
         <div class="col">
             @foreach($data as $i)
-                {y:{{$i->times}}, label:"{{$i->do}}"},<br>
+                {y:{{$i->votes}}, label:"{{$i->app}}"},<br>
             @endforeach
         </div>
     </div>
